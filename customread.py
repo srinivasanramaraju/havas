@@ -2,8 +2,6 @@ from fileparser import Fileparser
 from collections import defaultdict
 import time
 
-
-
 # Function to find key with most unique values and to compute average
 def simpleComputation(uniqueDict,type=0):
     max_key=""
@@ -20,8 +18,6 @@ def simpleComputation(uniqueDict,type=0):
                 max_val = len(v)
         return max_key
 
-
-
 # Main Driver Function
 def main():
 
@@ -31,12 +27,10 @@ def main():
     logFile2Lst=logFile2.readAllLines()
     logFile1Lst.extend(logFile2Lst[1:])
 
-
     uniqueNetizens=defaultdict(set)
     avgTimeSpent=defaultdict(list)
     popularDate =defaultdict(set)
     popularSection=defaultdict(set)
-
 
     for eachitem in logFile1Lst[1:]:
 
@@ -62,7 +56,6 @@ def main():
         except ValueError:
             continue
 
-
     maxCountry = simpleComputation(uniqueNetizens)
     print("a. From which country did the site receive the most unique visitors?")
     print(maxCountry)
@@ -75,7 +68,6 @@ def main():
     popular_section = simpleComputation(popularSection)
     print("d. What is the most popular section of the webiste (as calculated by the number of unique visitors)?")
     print(popular_section)
-
 
 if __name__ == '__main__':
     main()

@@ -35,6 +35,3 @@ class Fileparser():
             return allLines
         else:
             return open(self.fileName)
-
-
-

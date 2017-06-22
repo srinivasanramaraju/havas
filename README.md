@@ -7,5 +7,5 @@
 1. The results will be displayed
 
 
-### Factors considered
+## Factors considered
 1. Both Null and irrelevant values weren't considered for calculating the answers.
